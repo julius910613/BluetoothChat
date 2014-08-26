@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacy settings"
+            android:textStyle="italic" >
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/n25"
+                android:layout_weight="1"
+                android:text="can be stored?"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <RadioGroup
+                android:id="@+id/privacy_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_x="3px"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/privacy_yesradio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/n5"
+                    android:layout_marginRight="@dimen/n5"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/privacy_noradio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/n25"
+                    android:layout_marginRight="@dimen/n5"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="14"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <EditText
+                    android:id="@+id/privacy_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="time you want store on the doctor&apos;s client(in minute)"
+                    android:inputType="number"
+                    >"
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="13"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/privacy_listView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/privacy_backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="back" />
+
+        <Button
+            android:id="@+id/privacy_selectallbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="select all" />
+
+        <Button
+            android:id="@+id/privacy_unselectallbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="unselectall" />
+
+        <Button
+            android:id="@+id/privacy_sendbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="send" />
+    </LinearLayout>
+
+</LinearLayout>

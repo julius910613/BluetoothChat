@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="50" >
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="48"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/androidbluetooth_showtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+        <ListView
+            android:id="@+id/androidbluetooth_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="38" >
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+            android:id="@+id/androidbluetooth_backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="log-off" />
+
+        <Button
+            android:id="@+id/androidbluetooth_sendbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="exit" />
+    </LinearLayout>
+
+</LinearLayout>
